@@ -16,10 +16,10 @@ disp(A)
 disp('Matriz B:')
 disp(B)
 
-% Transpuesta e inversa de cada matriz
-disp('Transpuesta de A:')
+% Traspuesta e inversa de cada matriz
+disp('Traspuesta de A:')
 disp(A')
-disp('Transpuesta de B:')
+disp('Traspuesta de B:')
 disp(B')
 
 if esCuadrada

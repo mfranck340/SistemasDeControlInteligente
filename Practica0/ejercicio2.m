@@ -12,10 +12,12 @@ disp(A);
 
 % b. En una segunda matriz mostrar las columnas impares
 B = A(:, 1:2:end);
+disp("Columnas impares de la matriz inicial: ");
 disp(B);
 
 % c. Valor de los elementos de la diagonal principal
 d = diag(A);
+disp("Elementos de la diagonal de la matriz inicial: ");
 disp(d);
 
 % d. Valor max, min, mean, var de cada fila de A

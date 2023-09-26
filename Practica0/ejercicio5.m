@@ -14,6 +14,7 @@ subplot(2,1,1)
 surf(X,Y,Z)
 xlabel('x')
 ylabel('y')
+zlabel('z')
 title('Surperficie')
 
 % Dibujar malla 
@@ -21,6 +22,7 @@ subplot(2,2,3)
 mesh(X,Y,Z)
 xlabel('x')
 ylabel('y')
+zlabel('z')
 title('Malla')
 
 % Dibujar contorno
