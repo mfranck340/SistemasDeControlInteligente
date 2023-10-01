@@ -3,16 +3,30 @@
 
 function [solucion, reales, complejas] = raices(poli_1, poli_2)
 
-    opt = input("A quien se aplica la solucion? (poli_1, poli_2, prod_poli): ");
+    opt = input("A quien se aplica la solucion? \npoli_1 = 1 \npoli_2 = 2 \nprod_poli = 3 \nSeleccion: ");
     
-    if strcmp(opt, 'poli_1')
-        a = 0;
-    elseif strcmp(opt, 'poli_2')
-        a = 1;
-    elseif strcmp(opt, 'prod_poli')
-        a = 2;
-    else
-        disp('Opcion no valida')
+    switch opt
+        case 1
+            poli = poli_1;
+        case 2
+            poli = poli_2;
+        case 3
+            poli = xd;
+        otherwise
+            error('Opcion no valida')
+    end
+
+    solucion = roots(poli);
+
+    reales = 0;
+    complejas = 0;
+
+    for i = 1:length(solucion)
+        if isreal(solucion(i))
+            reales = reales + 1;
+        else
+            complejas = complejas + 1;
+        end
     end
 
 end
