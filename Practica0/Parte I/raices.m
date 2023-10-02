@@ -11,7 +11,7 @@ function [solucion, reales, complejas] = raices(poli_1, poli_2)
         case 2
             poli = poli_2;
         case 3
-            poli = xd;
+            poli = conv(poli_1, poli_2);
         otherwise
             error('Opcion no valida')
     end
@@ -28,5 +28,13 @@ function [solucion, reales, complejas] = raices(poli_1, poli_2)
             complejas = complejas + 1;
         end
     end
+
+    % Grafica de las raices en un plano complejo
+    figure
+    plot(real(solucion), imag(solucion), 'o')
+    title('Raices en el plano complejo')
+    xlabel('Eje real')
+    ylabel('Eje imaginario')
+    grid on
 
 end

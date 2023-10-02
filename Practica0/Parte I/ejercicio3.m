@@ -28,7 +28,7 @@ if esCuadrada
   disp('Inversa de B:')
   disp(inv(B))
 else
-    disp('No se puede calcular la inversa de una matriz no cuadrada')
+  disp('No se puede calcular la inversa de una matriz no cuadrada')
 end
 
 % Determinante y rango de cada matriz
@@ -38,7 +38,7 @@ if esCuadrada
   disp('Determinante de B:')
   disp(det(B))
 else
-    disp('No se puede calcular el determinante de una matriz no cuadrada')
+  disp('No se puede calcular el determinante de una matriz no cuadrada')
 end
 
 disp('Rango de A:')
@@ -47,8 +47,12 @@ disp('Rango de B:')
 disp(rank(B))
 
 % Producto matricial y elemento a elemento
-%disp('Producto matricial A*B:')
-%disp(A*B)
+if esCuadrada
+  disp('Producto matricial A*B:')
+  disp(A*B)
+else
+  disp('No se puede calcular el producto matricial de una matriz no cuadrada')
+end
 
 disp('Producto elemento a elemento A.*B:')
 disp(A.*B)
