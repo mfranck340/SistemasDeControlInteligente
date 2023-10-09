@@ -17,7 +17,7 @@ function Matriz = IntroducirMatriz(Dimensiones)
 
         for i=1:filas
             for j=1:columnas
-                Matriz(i,j) = input('Introduce un valor: ');
+                Matriz(i,j) = input(sprintf('Introduce un valor pos[%d, %d]: ', i, j));
             end
         end
     end
