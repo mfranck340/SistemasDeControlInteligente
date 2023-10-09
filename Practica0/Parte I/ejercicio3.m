@@ -26,16 +26,17 @@ disp(B')
 tolerancia = 1e-10;  % Define una tolerancia pequeña
 
 if esCuadrada
+  disp('Inversa de A:')
   if abs(det(A)) < tolerancia
     disp('No se puede calcular la inversa de una matriz singular')
   else
-    disp('Inversa de A:')
     disp(inv(A))
   end
+  
+  disp('Inversa de B:')
   if abs(det(B)) < tolerancia
     disp('No se puede calcular la inversa de una matriz singular')
   else
-    disp('Inversa de B:')
     disp(inv(B))
   end
 else

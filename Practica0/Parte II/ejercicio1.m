@@ -10,8 +10,11 @@ syms k a
 f = 2 + 5*k +k^2;
 fTrans = ztrans(f);
 
+fprintf('\nTransformada Z de la funcion 1: \n%s\n', fTrans)
+
 % representacion grafica de la funcion y su transformada
 h1 = figure('Name','FUNCION Y TRANSFORMADA', 'NumberTitle','off');
+title('FUNCION Y TRANSFORMADA')
 hold on
 subplot(3,2,1)
 fplot(f)
@@ -26,6 +29,8 @@ xlabel('valor k')
 % 2. Obtenga la transformada Z de la siguiente funcion
 f = sin(k) * exp(-a*k);
 fTrans = ztrans(f);
+
+fprintf('\nTransformada Z de la funcion 2: \n%s\n', fTrans)
 
 % Sustitucion del valor a
 f = subs(f, a, 1);
