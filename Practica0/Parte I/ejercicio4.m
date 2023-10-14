@@ -7,15 +7,15 @@ time_det = zeros(1, 25);
 time_rnk = zeros(1, 25);
 
 for i = 1:25
-    A = rand(i);
+    A = rand(i);        % Se crea la matriz aleatoria de tamaño i (0 - 25)
 
     tic
     det(A);
-    time_det(i) = toc;
+    time_det(i) = toc;  % Se obtiene el tiempo que tarda en calcularse el deteminante
 
     tic
     rank(A);
-    time_rnk(i) = toc;
+    time_rnk(i) = toc;  % Se obtiene el tiempo que tarda en calcularse el rango
 end
 
 % Representacion grafica

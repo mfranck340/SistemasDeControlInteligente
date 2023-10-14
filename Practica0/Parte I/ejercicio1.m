@@ -26,4 +26,4 @@ disp(C)
 D = [B(:,1); B(:,2); B(:,3)];
 disp("4. Concatenación de las columnas de B");
 disp("D = ");
-disp(D)
+disp(D);

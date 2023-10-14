@@ -4,10 +4,10 @@ clear all;
 % 1. Solicitar al usuario las dimensiones de una matriz en formato [m n]
 dimensiones = input('Ingrese las dimensiones de la matriz en formato [m n]: ');
 
-esCuadrada = length(dimensiones) == 1;
+esCuadrada = length(dimensiones) == 1;  % Se guarda si las matrices son cuadradas para saber si realizar algunos cálculos
 
-A = IntroducirMatriz(dimensiones);
-B = IntroducirMatriz(dimensiones);
+A = IntroducirMatriz(dimensiones);      % Se obtiene la matriz A
+B = IntroducirMatriz(dimensiones);      % Se obtiene la matriz B
 
 % 4. Mostrar por pantalla las matrices generadas
 fprintf('\nMatrices generadas\n')
@@ -23,9 +23,9 @@ disp(A')
 disp('Traspuesta de B:')
 disp(B')
 
-tolerancia = 1e-10;  % Define una tolerancia pequeña
+tolerancia = 1e-10; % Define una tolerancia para el cálculo del determinante que no da exactamente 0
 
-if esCuadrada
+if esCuadrada       % Solo se calcula la inversa si son matrices cuadradas
   disp('Inversa de A:')
   if abs(det(A)) < tolerancia
     disp('No se puede calcular la inversa de una matriz singular')
@@ -45,7 +45,7 @@ end
 
 % Determinante y rango de cada matriz
 fprintf('\nDeterminante y rango de cada matriz\n')
-if esCuadrada
+if esCuadrada       % Solo se calcula el determinante si son matrices cuadradas
   disp('Determinante de A:')
   disp(det(A))
   disp('Determinante de B:')
@@ -61,7 +61,7 @@ disp(rank(B))
 
 % Producto matricial y elemento a elemento
 fprintf('\nProducto matricial y elemento a elemento\n')
-if esCuadrada
+if esCuadrada       % Solo se calcula el producto matricial si son matrices cuadradas
   disp('Producto matricial A*B:')
   disp(A*B)
 else

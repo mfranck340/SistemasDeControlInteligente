@@ -28,7 +28,7 @@ var = var(A, 0, 2);
 
 % Representacion grafica de los valores
 t = tiledlayout(2,2);
-title(t,"Valores por fila")
+title(t,"Valores por fila");
 
 nexttile
 plot(max)
