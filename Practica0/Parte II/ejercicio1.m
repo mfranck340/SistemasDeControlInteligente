@@ -5,10 +5,10 @@ clc
 % Ejercicio 1: Transformadas de señales
 
 % 1. Obtenga la transformada Z de la siguiente funcion
-syms k a
+syms k a                % variables simbolicas
 
-f = 2 + 5*k +k^2;
-fTrans = ztrans(f);
+f = 2 + 5*k +k^2;       % funcion
+fTrans = ztrans(f);     % transformada
 
 fprintf('\nTransformada Z de la funcion 1: \n%s\n', fTrans)
 
@@ -27,15 +27,16 @@ title('Transformada 1')
 xlabel('valor k')
 
 % 2. Obtenga la transformada Z de la siguiente funcion
-f = sin(k) * exp(-a*k);
-fTrans = ztrans(f);
+f = sin(k) * exp(-a*k); % funcion
+fTrans = ztrans(f);     % transformada
 
 fprintf('\nTransformada Z de la funcion 2: \n%s\n', fTrans)
 
 % Sustitucion del valor a
-f = subs(f, a, 1);
-fTrans = subs(fTrans, a, 1);
+f = subs(f, a, 1);      % sustitucion de a por 1
+fTrans = subs(fTrans, a, 1);   
 
+% representacion grafica de la funcion y su transformada
 subplot(3,2,3)
 fplot(f)
 title('Función 2')
@@ -47,11 +48,11 @@ title('Transformada 2')
 xlabel('valor k')
 
 % 3. Con la siguiente funcion de transferencia
-T = tf([0.4 0 0], [1 -1 0.1 0.02], 0.01);
+T = tf([0.4 0 0], [1 -1 0.1 0.02], 0.01);   % funcion de transferencia
 
 % Obtenga la respuesta al impulso
 subplot(3,2,5)
-impulse(T)
+impulse(T)          % respuesta al impulso
 % Obtenga la respuesta al escalon
 subplot(3,2,6)
-step(T)
+step(T)             % respuesta al escalon
