@@ -1,33 +1,35 @@
+% Ejercicio 2: Aproximacion de funciones
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% APROXIMACIÓN DE FUNCIONES
+% APROXIMACION DE FUNCIONES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all; close all;
 
-%   DEFINICIÓN DE LOS VECTORES DE ENTRADA-SALIDA
-%   ============================================
+% DEFINICION DE LOS VECTORES DE ENTRADA-SALIDA
+% ============================================
 
-t = -3:.1:3; % eje de tiempo
-F=sinc(t)+.001*randn(size(t));  % función que se desea aproximar
+t = -3:.1:3;                        % eje de tiempo
+F = sinc(t) + .001*randn(size(t));  % funcion que se desea aproximar
 
-plot(t,F,'+');
-title('Vectores de entrenamiento');
-xlabel('Vector de entrada P');
-ylabel('Vector Target T');
+% DISENO DE LA RED
+% ==================
+% Funciones de entrenamiento: [trainrp, trainlm, traingd, trainbr]
 
-%   DISEÑO DE LA RED
-%   ==================
+hiddenLayerSize = 15;                        % Numero de neuronas en la capa oculta    
+net = fitnet(hiddenLayerSize,'trainrp');    % Red neuronal
 
-hiddenLayerSize = 4;
-net = fitnet(hiddenLayerSize,'trainrp');
+% Division de los datos
+net.divideParam.trainRatio = 70/100;    % Porcentaje de datos de entrenamiento
+net.divideParam.valRatio = 15/100;      % Porcentaje de datos de validación
+net.divideParam.testRatio = 15/100;     % Porcentaje de datos de test
 
-net.divideParam.trainRatio = 70/100;
-net.divideParam.valRatio = 15/100;
-net.divideParam.testRatio = 15/100;
-
+% Entrenamiento de la red
 net = train(net,t,F);
 
-Y=net(t);
+% Prueba de la red
+Y = net(t);
 
+% Graficas
 plot(t,F,'+'); hold on;
 plot(t,Y,'-r'); hold off;
 title('Vectores de entrenamiento');
