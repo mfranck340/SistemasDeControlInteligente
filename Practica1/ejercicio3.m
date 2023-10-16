@@ -1,5 +1,6 @@
 % Carga de datos de ejemplo disponibles en la toolbox
-[inputs,targets] = simplefit_dataset;
+%[inputs,targets] = simplefit_dataset;
+[inputs,targets] = bodyfat_dataset;
 
 % Creación de la red
 hiddenLayerSize = 10;

@@ -1,5 +1,6 @@
 % Carga de datos de ejemplo disponibles en la toolbox
-[inputs,targets] = simpleclass_dataset;
+%[inputs,targets] = simpleclass_dataset;
+[inputs,targets] = cancer_dataset;
 
 % Creción de una red neuronal para el reconocimiento de patrones
 hiddenLayerSize = 10;
