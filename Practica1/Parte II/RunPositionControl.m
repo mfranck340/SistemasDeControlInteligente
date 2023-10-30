@@ -4,8 +4,8 @@
 Ts = 100e-3;
 
 % Referencia x-y de posicion
-refx = 2.0;
-refy = 2.0;
+refx = -100;
+refy = 3;
 
 % Ejecutar simulacion
 sim('PositionControl.slx');
@@ -50,7 +50,7 @@ outputs=[V_vec'; W_vec'];
 %% Apartado f)
 
 % Entrenar red neuronal
-net = feedforwardnet([28]);
+net = feedforwardnet([10]);
 net = configure(net,inputs,outputs);
 net = train(net,inputs,outputs);
 

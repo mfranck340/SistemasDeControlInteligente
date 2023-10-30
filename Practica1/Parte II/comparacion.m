@@ -1,11 +1,15 @@
-close all, clear all
 % Ejercicio 1. Apartado i)
 
 % Datos de inicializacion
 Ts = 100e-3;
-refx = -4.0717
-refy = -0.2401
+%refx = -100;
+%refy = 3;
 
+%refx = -12.56;
+%refy = 37.23;
+
+refx = 20;
+refy = 6;
 
 % Mostrar resultado
 figure(1),
