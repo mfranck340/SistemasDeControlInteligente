@@ -17,6 +17,9 @@ F = sinc(t) + .001*randn(size(t));  % funcion que se desea aproximar
 
 hiddenLayerSize = 15;                        % Numero de neuronas en la capa oculta    
 net = fitnet(hiddenLayerSize,'trainrp');    % Red neuronal
+%net = fitnet(hiddenLayerSize, 'trainlm');
+%net = fitnet(hiddenLayerSize, 'traingd');
+%net = fitnet(hiddenLayerSize, 'trainbr');
 
 % Division de los datos
 net.divideParam.trainRatio = 70/100;    % Porcentaje de datos de entrenamiento

@@ -6,7 +6,10 @@
 
 % Creción de una red neuronal para el reconocimiento de patrones
 hiddenLayerSize = 10;
-net = patternnet(hiddenLayerSize, 'trainscg');
+net = fitnet(hiddenLayerSize, 'trainrp');
+%net = fitnet(hiddenLayerSize, 'trainbfg');
+%net = fitnet(hiddenLayerSize, 'traingdm');
+%net = fitnet(hiddenLayerSize, 'trainscg');
 
 % División del conjunto de datos para entrenamiento, validación y test
 net.divideParam.trainRatio = 80/100;

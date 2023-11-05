@@ -50,7 +50,7 @@ outputs=[V_vec'; W_vec'];
 %% Apartado f)
 
 % Entrenar red neuronal
-net = feedforwardnet([10]);
+net = feedforwardnet([11]);
 net = configure(net,inputs,outputs);
 net = train(net,inputs,outputs);
 
