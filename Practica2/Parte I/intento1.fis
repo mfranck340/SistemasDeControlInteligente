@@ -1,0 +1,57 @@
+[System]
+Name='intento1'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=10
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='E_d'
+Range=[0 15]
+NumMFs=2
+MF1='CERO':'trimf',[-5 0 5]
+MF2='POS':'trapmf',[0 5 20 20]
+
+[Input2]
+Name='E_theta'
+Range=[-3.14159265358979 3.14159265358979]
+NumMFs=5
+MF1='NEG_GRA':'trapmf',[-10 -10 -3 -2]
+MF2='CERO':'trimf',[-2 0 2]
+MF3='POS_GRA':'trapmf',[2 3 10 10]
+MF4='NEG_PEQ':'trimf',[-3 -2 0]
+MF5='POS_PEQ':'trimf',[0 2 3]
+
+[Output1]
+Name='V'
+Range=[0 2]
+NumMFs=3
+MF1='mf1':'trimf',[-0.8333 0 0.8333]
+MF2='mf2':'trimf',[0.1667 1 1.833]
+MF3='mf3':'trimf',[1.167 2 2.833]
+
+[Output2]
+Name='W'
+Range=[-1 1]
+NumMFs=3
+MF1='NEG':'trimf',[-1 -0.5 -0]
+MF2='CERO':'trimf',[-0.5 0 0.5]
+MF3='POS':'trimf',[0 0.5 1]
+
+[Rules]
+1 1, 0 1 (1) : 1
+1 4, 0 1 (1) : 1
+1 2, 0 2 (1) : 1
+1 3, 0 3 (1) : 1
+1 5, 0 3 (1) : 1
+2 1, 0 1 (1) : 1
+2 4, 0 1 (1) : 1
+2 2, 0 2 (1) : 1
+2 3, 0 3 (1) : 1
+2 5, 0 3 (1) : 1
