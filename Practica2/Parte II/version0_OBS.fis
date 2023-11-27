@@ -1,10 +1,10 @@
 [System]
-Name='version1'
+Name='version1_OBS'
 Type='mamdani'
 Version=2.0
-NumInputs=2
+NumInputs=4
 NumOutputs=2
-NumRules=6
+NumRules=7
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -27,6 +27,22 @@ MF1='CERO':'trimf',[-0.2 0 0.2]
 MF2='NEG':'linzmf',[-1 0]
 MF3='POS':'linsmf',[0 1]
 
+[Input3]
+Name='E_d_obs'
+Range=[0 15]
+NumMFs=3
+MF1='BAJO':'linzmf',[0 1]
+MF2='MEDIO':'trimf',[0 4 8]
+MF3='ALTO':'linsmf',[6 15]
+
+[Input4]
+Name='E_theta_obs'
+Range=[-3.14159265358979 3.14159265358979]
+NumMFs=3
+MF1='NEG':'linzmf',[-3.14159265358979 0]
+MF2='ZERO':'trimf',[-0.2 0 0.2]
+MF3='POS':'linsmf',[0 3.14159265358979]
+
 [Output1]
 Name='V'
 Range=[0 2]
@@ -44,9 +60,10 @@ MF2='CERO':'trimf',[-0.05 0 0.05]
 MF3='POS':'linsmf',[0 1]
 
 [Rules]
-1 0, 1 0 (1) : 1
-3 0, 2 0 (1) : 1
-2 0, 3 0 (1) : 1
-0 1, 0 2 (1) : 1
-0 2, 0 1 (1) : 1
-0 3, 0 3 (1) : 1
+1 0 0 0, 1 0 (1) : 1
+3 0 0 0, 2 0 (1) : 1
+2 0 0 0, 3 0 (1) : 1
+0 1 0 0, 0 2 (1) : 1
+0 2 0 0, 0 1 (1) : 1
+0 3 0 0, 0 3 (1) : 1
+0 0 1 2, 0 1 (1) : 1
