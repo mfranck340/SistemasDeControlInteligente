@@ -1,0 +1,52 @@
+[System]
+Name='version1'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=6
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='E_d'
+Range=[0 15]
+NumMFs=3
+MF1='BAJO':'linzmf',[0 5.5]
+MF2='ALTO':'linsmf',[9.5 15]
+MF3='MEDIO':'trimf',[3.75 7.5 11.25]
+
+[Input2]
+Name='E_theta'
+Range=[-3.14159265358979 3.14159265358979]
+NumMFs=3
+MF1='CERO':'trimf',[-0.1 0 0.1]
+MF2='NEG':'linzmf',[-1 0]
+MF3='POS':'linsmf',[0 1]
+
+[Output1]
+Name='V'
+Range=[0 2]
+NumMFs=3
+MF1='LENTA':'linzmf',[0 0.75]
+MF2='MEDIA':'trimf',[0.5 1 1.5]
+MF3='RAPIDA':'linsmf',[1.25 2]
+
+[Output2]
+Name='W'
+Range=[-1 1]
+NumMFs=3
+MF1='NEG':'linzmf',[-1 0]
+MF2='CERO':'trimf',[-0.05 0 0.05]
+MF3='POS':'linsmf',[0 1]
+
+[Rules]
+1 0, 1 0 (1) : 1
+3 0, 2 0 (1) : 1
+2 0, 3 0 (1) : 1
+0 1, 0 2 (1) : 1
+0 2, 0 1 (1) : 1
+0 3, 0 3 (1) : 1
