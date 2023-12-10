@@ -1,5 +1,5 @@
 [System]
-Name='version3'
+Name='FuzzyParteI'
 Type='mamdani'
 Version=2.0
 NumInputs=2
@@ -15,9 +15,9 @@ DefuzzMethod='centroid'
 Name='E_d'
 Range=[0 15]
 NumMFs=3
-MF1='BAJO':'linzmf',[0 5.5]
-MF2='ALTO':'linsmf',[9.5 15]
-MF3='MEDIO':'trimf',[3.75 7.5 11.25]
+MF1='BAJO':'linzmf',[0 5]
+MF2='ALTO':'linsmf',[5 15]
+MF3='MEDIO':'trimf',[0 5 10]
 
 [Input2]
 Name='E_theta'
@@ -31,9 +31,9 @@ MF3='POS':'linsmf',[0 3.14159265358979]
 Name='V'
 Range=[0 2]
 NumMFs=3
-MF1='LENTA':'linzmf',[0 0.75]
-MF2='MEDIA':'trimf',[0.5 1 1.5]
-MF3='RAPIDA':'linsmf',[1.25 2]
+MF1='LENTA':'linzmf',[0 0.4]
+MF2='MEDIA':'trimf',[0.3 1 1.7]
+MF3='RAPIDA':'linsmf',[1.4 2]
 
 [Output2]
 Name='W'

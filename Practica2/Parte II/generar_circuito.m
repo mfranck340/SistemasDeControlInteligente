@@ -4,11 +4,11 @@ Ts = 100e-3;
 
 % Referencia x-y de posicion
 % Posicion objetivo
-refx = -3.8;
-refy = -4.3;
+refx = 5;
+refy = 0;
 % Posicion del obstaculo
-obsx = 0;
-obsy = -3.38;
+obsx = 1.2;
+obsy = 0;
 
 % Ejecutar Simulacion
 sim('PositionControl.slx')
