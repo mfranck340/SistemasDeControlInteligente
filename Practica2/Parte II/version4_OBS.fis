@@ -1,0 +1,69 @@
+[System]
+Name='version4_OBS'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=2
+NumRules=7
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='E_d'
+Range=[0 15]
+NumMFs=3
+MF1='BAJO':'linzmf',[0 5.5]
+MF2='ALTO':'linsmf',[9.5 15]
+MF3='MEDIO':'trimf',[3.75 7.5 11.25]
+
+[Input2]
+Name='E_theta'
+Range=[-3.14159265358979 3.14159265358979]
+NumMFs=3
+MF1='CERO':'trimf',[-0.1 0 0.1]
+MF2='NEG':'linzmf',[-3.14159265358979 0]
+MF3='POS':'linsmf',[0 3.14159265358979]
+
+[Input3]
+Name='E_d_obs'
+Range=[0 15]
+NumMFs=3
+MF1='BAJO_OBS':'linzmf',[0 0.5]
+MF2='MEDIO_OBS':'trimf',[0 4.25 8.5]
+MF3='ALTO_OBS':'linsmf',[7.5 15]
+
+[Input4]
+Name='E_theta_obs'
+Range=[-3.14159265358979 3.14159265358979]
+NumMFs=3
+MF1='NEG_OBS':'linzmf',[-3.142 0]
+MF2='CERO_OBS':'trimf',[-0.2 0 0.2]
+MF3='POS_OBS':'linsmf',[0 3.142]
+
+[Output1]
+Name='V'
+Range=[0 2]
+NumMFs=3
+MF1='LENTA':'linzmf',[0 0.75]
+MF2='MEDIA':'trimf',[0.5 1 1.5]
+MF3='RAPIDA':'linsmf',[1.25 2]
+
+[Output2]
+Name='W'
+Range=[-1 1]
+NumMFs=3
+MF1='NEG':'linzmf',[-1 0]
+MF2='CERO':'trimf',[-0.05 0 0.05]
+MF3='POS':'linsmf',[0 1]
+
+[Rules]
+1 0 0 0, 1 0 (1) : 1
+3 0 0 0, 2 0 (1) : 1
+2 0 0 0, 3 0 (1) : 1
+0 1 0 0, 0 2 (1) : 1
+0 2 0 0, 0 1 (1) : 1
+0 3 0 0, 0 3 (1) : 1
+0 0 1 2, 0 1 (1) : 1
