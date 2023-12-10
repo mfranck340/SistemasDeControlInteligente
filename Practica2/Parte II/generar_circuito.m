@@ -34,9 +34,6 @@ plot(obsx, obsy, 'x');
 title('Trayectoria con obstaculo');
 legend('Trayectoria', 'Obstaculo');
 
-
-
-
 %%
 % Apartado e)
 % Tiempo de muestreo
@@ -66,23 +63,6 @@ plot(x,y);
 grid on;
 hold on;
 plot(x_obs,y_obs);
-plot(obsx, obsy, 'gx');
+plot(obsx, obsy, 'kx');
 title('Trayectoria con obstaculo');
 legend("ruta", "robot", "obs");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
