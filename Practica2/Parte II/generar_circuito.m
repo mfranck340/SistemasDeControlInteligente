@@ -45,8 +45,8 @@ y_0 = 0;
 th_0 = 0;
 
 % Posicion del obstaculo
-obsx = 3;
-obsy = 0;
+obsx = 2.02;
+obsy = 0.98;
 
 % Ejecutar Simulacion
 
