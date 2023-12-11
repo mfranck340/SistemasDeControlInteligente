@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=5
 NumOutputs=2
-NumRules=1
+NumRules=4
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -55,21 +55,24 @@ MF3='GRA':'linsmf',[4.5 5]
 Name='steering_wheel'
 Range=[-90 90]
 NumMFs=5
-MF1='GIRO_NEG_GRA':'linzmf',[-90 -50]
-MF2='Z':'trimf',[-1 0 1]
-MF3='GIRO_POS_GRA':'linsmf',[50 90]
-MF4='GIRO_NEG_MED':'trimf',[-90 -50 0]
-MF5='GIRO_POS_MED':'trimf',[0 50 90]
+MF1='NEG_GRA':'linzmf',[-90 -50]
+MF2='ZERO':'trimf',[-1 0 1]
+MF3='POS_GRA':'linsmf',[50 90]
+MF4='NEG':'trimf',[-90 -50 0]
+MF5='POS':'trimf',[0 50 90]
 
 [Output2]
 Name='vel'
-Range=[-30 30]
+Range=[-15 15]
 NumMFs=5
-MF1='NG':'linzmf',[-30 -5]
-MF2='Z':'trimf',[-2 0 2]
-MF3='PG':'linsmf',[5 30]
-MF4='N':'trimf',[-10 -5 0]
-MF5='P':'trimf',[0 5 10]
+MF1='NG':'trimf',[-7.5 -5 -2.5]
+MF2='Z':'trimf',[-0.05 0 0.05]
+MF3='PG':'trimf',[2.5 5 7.5]
+MF4='N':'trimf',[-5 -2.5 0]
+MF5='P':'trimf',[0 2.5 5]
 
 [Rules]
-0 0 0 0 -3, 0 1 (1) : 1
+0 0 0 3 0, 0 1 (1) : 1
+0 0 0 0 3, 3 4 (1) : 1
+0 1 0 0 0, 5 4 (1) : 1
+0 0 0 1 0, 0 2 (1) : 1
