@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=12
 NumOutputs=2
-NumRules=7
+NumRules=6
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -148,4 +148,3 @@ MF7='PG':'trimf',[5 7.5 10]
 0 0 0 0 1 0 0 0 0 0 0 0, 5 4 (1) : 1
 0 0 0 0 0 0 0 0 2 2 0 0, 3 4 (1) : 1
 0 0 0 0 0 0 0 0 1 1 0 0, 2 2 (1) : 1
-0 0 0 0 0 0 0 0 3 3 0 0, 1 4 (1) : 1
