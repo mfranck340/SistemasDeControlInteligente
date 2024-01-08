@@ -24,8 +24,8 @@ Name='sensor1'
 Range=[0 5]
 NumMFs=3
 MF1='PEQ':'linzmf',[0 0.5]
-MF2='MED':'trimf',[0.25 2.5 4.5]
-MF3='GRA':'linsmf',[4.5 5]
+MF2='MED':'trimf',[0.25 2.5 3]
+MF3='GRA':'linsmf',[2.5 5]
 
 [Input3]
 Name='sensor2'
@@ -52,8 +52,8 @@ Name='sensor4'
 Range=[0 5]
 NumMFs=3
 MF1='PEQ':'linzmf',[0 0.5]
-MF2='MED':'trimf',[0.25 2.5 4.5]
-MF3='GRA':'linsmf',[4.5 5]
+MF2='MED':'trimf',[0.25 2.5 3]
+MF3='GRA':'linsmf',[2.5 5]
 
 [Input6]
 Name='sensor5'
@@ -69,7 +69,7 @@ MF5='SG':'trimf',[1.5 2 3.5]
 Name='sensor6'
 Range=[0 5]
 NumMFs=3
-MF1='PEQ':'linzmf',[0 2]
+MF1='PEQ':'linzmf',[0 1.1]
 MF2='GRA':'linsmf',[2 2.5]
 MF3='MED':'trimf',[1.5 2 2.5]
 
@@ -113,7 +113,7 @@ MF5='MED':'trimf',[2.3 4 5]
 Name='sensor11'
 Range=[0 5]
 NumMFs=3
-MF1='PEQ':'linzmf',[0 2]
+MF1='PEQ':'linzmf',[0 1.1]
 MF2='MED':'trimf',[1.5 2 2.5]
 MF3='GRA':'linsmf',[2 2.5]
 
@@ -155,5 +155,5 @@ MF7='PG':'trimf',[5 7.5 10]
 0 0 0 0 0 0 0 0 3 0 0 3, 1 4 (1) : 1
 0 0 0 0 0 0 0 5 2 3 0 0, 2 6 (1) : 1
 0 0 0 0 0 0 0 0 2 1 0 0, 3 4 (1) : 1
-0 0 0 0 0 0 0 2 3 3 0 0, 1 4 (1) : 1
-0 0 0 0 0 0 0 0 2 2 5 0, 3 4 (0) : 1
+0 0 0 0 0 0 0 2 3 3 0 1, 1 4 (1) : 1
+0 0 0 0 0 0 1 0 2 2 5 0, 3 4 (1) : 1
