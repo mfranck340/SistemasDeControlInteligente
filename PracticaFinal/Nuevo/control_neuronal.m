@@ -1,5 +1,5 @@
 %% Cargar datos para entrenamiento
-load("variables2.mat")
+load("variables_dani.mat")
 
 %% Inicializar datos de entrenamiento
 inputs = [];
@@ -25,4 +25,4 @@ net = train(net,inputs,outputs);
 gensim(net, 0.1)
 
 %% Almacenar datos
-save("variables2.mat", "inputs", "outputs")
+save("variables_dani.mat", "inputs", "outputs")

@@ -48,16 +48,16 @@ Name='sensor8'
 Range=[0 5]
 NumMFs=3
 MF1='PEQ':'linzmf',[0 1.5]
-MF2='MED':'trapmf',[1 1.5 3 3.5]
-MF3='GRA':'linsmf',[3 5]
+MF2='MED':'trapmf',[1 1.5 2.5 3]
+MF3='GRA':'linsmf',[2.5 5]
 
 [Input6]
 Name='sensor9'
 Range=[0 5]
 NumMFs=3
 MF1='PEQ':'linzmf',[0 1.5]
-MF2='GRA':'linsmf',[3 5]
-MF3='MED':'trapmf',[1 1.5 3 3.5]
+MF2='GRA':'linsmf',[2.5 5]
+MF3='MED':'trapmf',[1 1.5 2.5 3]
 
 [Input7]
 Name='sensor10'
