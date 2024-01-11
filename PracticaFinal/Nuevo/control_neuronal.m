@@ -15,7 +15,7 @@ inputs = double(inputs);
 outputs = double(outputs);
 
 %% Generar red
-net = feedforwardnet([20 25 20]);
+net = feedforwardnet([13 18 18]);
 
 %% Entrenamiento de red
 net = configure(net,inputs,outputs);
