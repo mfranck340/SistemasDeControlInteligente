@@ -83,7 +83,7 @@ MF1='NEG_GRA':'linzmf',[-90 -85]
 MF2='ZERO':'trimf',[-0.01 0 0.01]
 MF3='POS_GRA':'linsmf',[85 90]
 MF4='NEG':'trimf',[-20 -15 -10]
-MF5='POS':'trimf',[30 35 40]
+MF5='POS':'trimf',[10 15 20]
 
 [Output2]
 Name='vel'
